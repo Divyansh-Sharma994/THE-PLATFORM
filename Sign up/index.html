@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <title>PLATFORM Registration.</title>
-  <script src="https://kit.fontawesome.com/e2ac9cc532.js" crossorigin="anonymous"></script><link rel="stylesheet" href="./style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"></script>
+  <script src="https://kit.fontawesome.com/e2ac9cc532.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
 
 </head>
 <body>
 <!-- partial:index.partial.html -->
 <div class='signup-container'>
   <div class='left-container'>
-    <img src = "C:\Users\ASUS\Desktop\PLATFORM\Sign up\Images\register_image.png">
+    <img src = "Images/register_image.png">
     <video autoplay  width="240" height="240"
-      <source src="C:\Users\ASUS\Desktop\PLATFORM\Sign up\Images\platform.mp4" type="video/mp4">
+      <source src="Images/platform.mp4" type="video/mp4">
       </video>
     <div class='form'>
       <img src="">
@@ -38,10 +42,22 @@
           <label for='E-mail'>E-mail</label>
           <input id='E-mail' placeholder="E-mail" type="email" required />
         </div>
-        <div class='birthday'>
-          <label for='birthday'>Birthday</label>
-          <input id='birthday' placeholder='MM/DD/YYYY' type='text' required />
-        </div>
+       <div class='birthday'>
+  <label for='birthday'>Birthday</label>
+  <input id='birthday' placeholder='MM/DD/YYYY' type='text' required />
+</div>
+
+<script>
+  $(document).ready(function() {
+    // Apply the datepicker to the birthday input field
+    $('#birthday').datepicker({
+      dateFormat: 'mm/dd/yy', // Format the date as MM/DD/YYYY
+      changeMonth: true, // Allow month dropdown
+      changeYear: true, // Allow year dropdown
+      yearRange: '1900:2030', // Limit the year range from 1900 to 2030 (you can adjust this as needed)
+    });
+  });
+</script>
       </div>
       <div class='set'>
         <div class='gender'>
